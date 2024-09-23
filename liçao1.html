@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão de Valores</title>
+    <script>
+        function realizarDivisao() {
+            // Lê o primeiro valor
+            const primeiroValor = parseFloat(prompt("Informe o primeiro valor:"));
+            let segundoValor;
+
+            // Lê o segundo valor e verifica se é válido
+            do {
+                segundoValor = parseFloat(prompt("Informe o segundo valor (deve ser maior que zero):"));
+                if (segundoValor <= 0) {
+                    alert("Valor inválido! O segundo valor deve ser maior que zero.");
+                }
+            } while (segundoValor <= 0);
+
+            // Realiza a divisão
+            const resultado = primeiroValor / segundoValor;
+
+            // Exibe o resultado
+            alert(`Resultado da divisão: ${resultado}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Divisão de Dois Valores</h1>
+    <button onclick="realizarDivisao()">Realizar Divisão</button>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuadas de 1 a N</title>
+    <script>
+        function imprimirTabuadas() {
+            let N = parseInt(prompt("Digite um valor N (maior que 0):"));
+            let resultados = "";
+
+            // Verifica se N é um número válido e maior que 0
+            if (N > 0) {
+                // Loop para as tabuadas de 1 até N
+                for (let i = 1; i <= N; i++) {
+                    resultados += `<h3>Tabuada de ${i}:</h3>`;
+                    for (let j = 1; j <= 10; j++) {
+                        resultados += `${i} x ${j} = ${i * j}<br>`;
+                    }
+                    resultados += "<br>"; // Espaço entre as tabuadas
+                }
+
+                // Exibe os resultados na página
+                document.getElementById("resultado").innerHTML = resultados;
+            } else {
+                alert("Por favor, insira um valor maior que 0.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Tabuadas de 1 a N</h1>
+    <button onclick="imprimirTabuadas()">Imprimir Tabuadas</button>
+    <div id="resultado"></div>
+</body>
+</html>

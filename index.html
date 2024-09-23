@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Decrescentes</title>
+    <script>
+        function imprimirDecrescente() {
+            let resultado = "";
+            for (let i = 10; i >= 1; i--) {
+                resultado += i + (i > 1 ? ", " : "");
+            }
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</head>
+<body onload="imprimirDecrescente()">
+    <h1>Números de 10 a 1 em Ordem Decrescente</h1>
+    <p id="resultado"></p>
+</body>
+</html>

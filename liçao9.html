@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Números Maiores que 100</title>
+    <script>
+        function imprimirNumeros() {
+            let resultados = "";
+            let contador = 0;
+            let numero = 101; // Começa com 101, que é o primeiro número maior que 100
+
+            // Loop para imprimir os 10 primeiros números inteiros maiores que 100
+            while (contador < 10) {
+                resultados += numero + "<br>"; // Adiciona o número seguido de uma quebra de linha
+                numero++; // Incrementa para o próximo número
+                contador++; // Incrementa o contador
+            }
+
+            // Exibe os resultados na página
+            document.getElementById("resultado").innerHTML = resultados;
+        }
+    </script>
+</head>
+<body>
+    <h1>Primeiros Números Maiores que 100</h1>
+    <button onclick="imprimirNumeros()">Imprimir Números</button>
+    <div id="resultado"></div>
+</body>
+</html>

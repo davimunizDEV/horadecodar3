@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomba Relógio</title>
+    <script>
+        function bombaRelogio() {
+            let tempo = 30; // Tempo inicial da contagem
+            const display = document.getElementById("contagem"); // Elemento para exibir a contagem
+
+            const intervalo = setInterval(() => {
+                if (tempo >= 0) {
+                    display.textContent = tempo; // Atualiza o display
+                    tempo--; // Decrementa o tempo
+                } else {
+                    clearInterval(intervalo); // Para a contagem
+                    display.textContent = "EXPLOSÃO"; // Exibe a mensagem final
+                }
+            }, 1000); // Atualiza a cada 1 segundo (1000 ms)
+        }
+    </script>
+</head>
+<body>
+    <h1>Bomba Relógio</h1>
+    <div id="contagem" style="font-size: 48px;">30</div>
+    <button onclick="bombaRelogio()">Iniciar Contagem</button>
+</body>
+</html>
